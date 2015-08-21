@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
+  devise_for :users, skip: [:registrations, :sessions]
+  as :user do
+    get 'login', to: 'devise/sessions#new', as: :new_user_session
+    post 'login', to: 'devise/sessions#create', as: :user_session
+    delete 'logout', to: 'devise/sessions#destroy', as: :destroy_user_session
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
