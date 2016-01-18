@@ -21,11 +21,9 @@
     <%= image_tag "photo_11.jpg", class: "img-responsive" %>
   </div>   
   <div class="col-xs-4" id="middle">
-    <%= image_tag "photo_4.jpg", class: "img-responsive" %>
-    <%= image_tag "photo_5.jpg", class: "img-responsive" %>
-    <%= image_tag "photo_3.jpg", class: "img-responsive" %>
-    <%= image_tag "photo_5.jpg", class: "img-responsive" %>
-    <%= image_tag "photo_6.jpg", class: "img-responsive" %>
+    <% @photos.each do |photo| %>
+      <%= image_tag photo.image.url(:large), class: 'img-responsive' %>
+    <% end %>
   </div>
   <div class="col-xs-4" id="right">
     <%= image_tag "photo_6.jpg", class: "img-responsive" %>
