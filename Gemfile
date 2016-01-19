@@ -54,3 +54,4 @@ gem 'devise'
 gem 'simple_form'
 gem "paperclip", "~> 4.3"
 gem 'aws-sdk', '< 2.0'
+gem 'httparty', '~> 0.13.7'
