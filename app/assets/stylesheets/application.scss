@@ -50,7 +50,7 @@ footer {
   color: #fff;
 }
 
-.img-responsive {
+.img-responsive, iframe {
   margin-bottom: 10px;
 }
 
@@ -121,3 +121,7 @@ footer {
 }
 
 .panel { border-radius: 8px; }
+
+iframe {
+  @extend .img-responsive;
+}

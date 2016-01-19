@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :videos
   resources :photos
   root 'static_pages#home'
   devise_for :users, skip: [:registrations, :sessions]
