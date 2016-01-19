@@ -4,5 +4,9 @@
   <%= image_tag @photo.image.url(:large) %>
 </p>
 
+<p>
+  <strong>Category:</strong> <%= @photo.category %>
+</p>
+
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
