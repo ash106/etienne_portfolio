@@ -19,7 +19,9 @@
     <% @videos.each do |video| %>
       <%= raw(video["html"]) %>
     <% end %>
-    <%= image_tag @videos.first["thumbnail_url"], class: "img-responsive" %>
+    <% if @videos.present? %>
+      <%= image_tag @videos.first["thumbnail_url"], class: "img-responsive" %>
+    <% end %>
   </div>   
   <div class="col-xs-4" id="middle">
     <% @photos.each do |photo| %>
