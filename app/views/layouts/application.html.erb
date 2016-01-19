@@ -18,6 +18,7 @@
   </head>
   <body class=<%= "home" if @home %>>
     <div class="container-fluid">
+      <%= render "layouts/navigation" %>
       <%= render "layouts/flashes" %>
       <%= yield %>
     </div>

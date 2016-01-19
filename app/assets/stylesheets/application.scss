@@ -10,9 +10,14 @@ body, html {
   height:100%;
 }
 
+body {
+  padding-top: 50px;
+}
+
 body.home {
   overflow: hidden;
   background-color: #000;
+  padding-top: 0;
   // letter-spacing: 4px;
 }
 
