@@ -2,6 +2,7 @@ $grid-gutter-width: 10px;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "lightbox";
 
 body, html {
   margin: 0;
@@ -32,9 +33,9 @@ body.home {
  display: none;
 }
 
-img:last-child {
-  margin-bottom: 0;
-}
+// img:last-child {
+//   margin-bottom: 0;
+// }
 
 header {
   color: #fff;
