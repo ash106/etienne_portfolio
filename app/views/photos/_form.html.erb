@@ -1,8 +1,14 @@
+<% if @photo.image.exists? %>
+  <%= image_tag @photo.image.url(:medium), id: 'image-preview', class: 'img-responsive' %>
+<% else %>
+  <%= image_tag 'placeholder.png', id: 'image-preview', class: 'img-responsive' %>
+<% end %>
+
 <%= simple_form_for(@photo) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :image, as: :file %>
+    <%= f.input :image, as: :file, input_html: { onChange: 'loadFile(event)' } %>
     <%= f.input :category, collection: Photo::CATEGORIES, include_blank: false %>
   </div>
 
