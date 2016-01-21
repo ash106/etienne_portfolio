@@ -17,10 +17,7 @@
 <div class="row">
   <div class="col-xs-4" id="left">
     <% @videos.each do |video| %>
-      <%= raw(video["html"]) %>
-    <% end %>
-    <% if @videos.present? %>
-      <%= image_tag @videos.first["thumbnail_url"], class: "img-responsive" %>
+      <%= link_to (image_tag video["thumbnail_url"], class: "img-responsive"), CGI.unescape(video["vimeo_url"]), class: "fancybox-media" %>
     <% end %>
   </div>   
   <div class="col-xs-4" id="middle">

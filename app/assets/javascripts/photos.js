@@ -7,4 +7,11 @@ $(document).ready(function() {
   $(".fancybox").fancybox({
     padding: 0
   });
+
+  $('.fancybox-media').fancybox({
+    padding: 0,
+    helpers: {
+      media: {}
+    }
+  });
 });

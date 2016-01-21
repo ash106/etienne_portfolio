@@ -9,7 +9,9 @@ class StaticPagesController < ApplicationController
     videos = Video.all
     videos.each do |video|
       response = HTTParty.get("https://vimeo.com/api/oembed.json?url=#{video.vimeo_url}")
-      @videos << JSON.parse(response.body)
+      video_object = JSON.parse(response.body)
+      video_object["vimeo_url"] = video.vimeo_url
+      @videos << video_object
     end
   end
 end
