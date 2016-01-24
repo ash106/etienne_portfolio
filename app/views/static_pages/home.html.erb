@@ -17,17 +17,26 @@
 <div class="row">
   <div class="col-xs-4" id="left">
     <% @videos.each do |video| %>
-      <%= link_to (image_tag video["thumbnail_url"], class: "img-responsive"), CGI.unescape(video["vimeo_url"]), class: "fancybox-media" %>
+      <%= link_to CGI.unescape(video["vimeo_url"]), class: "fancybox-media" do %>
+        <span class="overlay center-block"></span>
+        <%= image_tag video["thumbnail_url"], class: "img-responsive" %>
+      <% end %>
     <% end %>
   </div>   
   <div class="col-xs-4" id="middle">
     <% @photos.each do |photo| %>
-      <%= link_to (image_tag photo.image.url(:large), class: 'img-responsive'), photo.image.url(:original), class: "fancybox", rel: "photos" %>
+      <%= link_to photo.image.url(:original), class: "fancybox", rel: "photos" do %>
+        <span class="overlay center-block"></span>
+        <%= image_tag photo.image.url(:large), class: 'img-responsive' %>
+      <% end %>
     <% end %>
   </div>
   <div class="col-xs-4" id="right">
     <% @about.each do |photo| %>
-      <%= link_to (image_tag photo.image.url(:large), class: 'img-responsive'), photo.image.url(:original), class: "fancybox", rel: "photos" %>
+      <%= link_to photo.image.url(:original), class: "fancybox", rel: "photos" do %>
+        <span class="overlay center-block"></span>
+        <%= image_tag photo.image.url(:large), class: 'img-responsive' %>
+      <% end %>
     <% end %>
   </div>
 </div>
