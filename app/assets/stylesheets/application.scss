@@ -136,7 +136,7 @@ iframe {
 }
 
 span.overlay {
-  background: rgba(0, 0, 0, 0.5) url(plus-2-32.png) center center no-repeat;
+  background: rgba(0, 0, 0, 0.5) image-url("plus-2-32.png") center center no-repeat;
   position: absolute;
   z-index: 10;  
   -webkit-box-shadow: 0px 0px 4px #000;
