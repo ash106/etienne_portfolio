@@ -26,6 +26,9 @@ class VideosController < ApplicationController
   # POST /videos.json
   def create
     @video = Video.new(video_params)
+    response = HTTParty.get("https://vimeo.com/api/oembed.json?url=#{CGI.escape(@video.vimeo_url)}")
+    video_object = JSON.parse(response.body)
+    @video.thumbnail_url = video_object["thumbnail_url"]
 
     respond_to do |format|
       if @video.save
@@ -41,6 +44,10 @@ class VideosController < ApplicationController
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
+    response = HTTParty.get("https://vimeo.com/api/oembed.json?url=#{CGI.escape(@video.vimeo_url)}")
+    video_object = JSON.parse(response.body)
+    @video.thumbnail_url = video_object["thumbnail_url"]
+    
     respond_to do |format|
       if @video.update(video_params)
         format.html { redirect_to @video, notice: 'Video was successfully updated.' }
