@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :videos
+  resources :videos do
+    post :update_row_order, on: :collection
+  end
   resources :photos
   root 'static_pages#home'
   devise_for :users, skip: [:registrations, :sessions]

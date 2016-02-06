@@ -2,7 +2,7 @@
 
 <h1>Listing Videos</h1>
 
-<table class="table">
+<table class="table table-striped" id="sortable">
   <thead>
     <tr>
       <th>Vimeo url</th>
@@ -12,7 +12,7 @@
 
   <tbody>
     <% @videos.each do |video| %>
-      <tr>
+      <tr data-video-id="<%= video.id %>" class="item">
         <td><%= CGI.unescape(video.vimeo_url) %></td>
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>

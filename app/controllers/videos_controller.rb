@@ -5,7 +5,7 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
+    @videos = Video.rank(:row_order).all
   end
 
   # GET /videos/1
@@ -66,6 +66,14 @@ class VideosController < ApplicationController
     end
   end
 
+  def update_row_order
+    @video = Video.find(video_params[:video_id])
+    @video.row_order_position = video_params[:row_order_position]
+    @video.save
+
+    render nothing: true
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_video
@@ -74,6 +82,6 @@ class VideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:vimeo_url)
+      params.require(:video).permit(:vimeo_url, :video_id, :row_order_position)
     end
 end

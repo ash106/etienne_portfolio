@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
     @photos = Photo.where(category: "Photos")
     @about = Photo.where(category: "About")
     @videos = []
-    videos = Video.all
+    videos = Video.rank(:row_order).all
     videos.each do |video|
       response = HTTParty.get("https://vimeo.com/api/oembed.json?url=#{video.vimeo_url}")
       video_object = JSON.parse(response.body)
