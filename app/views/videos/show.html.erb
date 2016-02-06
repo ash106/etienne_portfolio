@@ -2,7 +2,7 @@
 
 <p>
   <strong>Vimeo url:</strong>
-  <%= CGI.unescape(@video.vimeo_url) %>
+  <%= @video.vimeo_url %>
 </p>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |

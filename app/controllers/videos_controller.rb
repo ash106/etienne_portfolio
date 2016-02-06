@@ -26,7 +26,6 @@ class VideosController < ApplicationController
   # POST /videos.json
   def create
     @video = Video.new(video_params)
-    @video.vimeo_url = CGI.escape(@video.vimeo_url)
 
     respond_to do |format|
       if @video.save
@@ -42,11 +41,8 @@ class VideosController < ApplicationController
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
-    formatted_video_params = video_params
-    formatted_video_params[:vimeo_url] = CGI.escape(video_params[:vimeo_url])
-
     respond_to do |format|
-      if @video.update(formatted_video_params)
+      if @video.update(video_params)
         format.html { redirect_to @video, notice: 'Video was successfully updated.' }
         format.json { render :show, status: :ok, location: @video }
       else

@@ -17,7 +17,7 @@
 <div class="row">
   <div class="col-xs-4" id="left">
     <% @videos.each do |video| %>
-      <%= link_to CGI.unescape(video["vimeo_url"]), class: "fancybox-media" do %>
+      <%= link_to video["vimeo_url"], class: "fancybox-media" do %>
         <span class="overlay center-block"></span>
         <%= image_tag video["thumbnail_url"], class: "img-responsive" %>
       <% end %>
