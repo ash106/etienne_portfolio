@@ -1,6 +1,9 @@
 class Photo < ActiveRecord::Base
   CATEGORIES = ["Photos", "About"]
 
+  scope :photos, -> { where(category: "Photos") }
+  scope :about, -> { where(category: "About") }
+
   has_attached_file :image, styles: {
     thumb: '100x100>',
     medium: '300x300>',

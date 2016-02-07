@@ -5,8 +5,8 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.where(category: "Photos")
-    @about = Photo.where(category: "About")
+    @photos = Photo.photos
+    @about = Photo.about
   end
 
   # GET /photos/1
