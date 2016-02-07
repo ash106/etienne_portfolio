@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.photos
+    @photos = Photo.photos.rank(:photos_order)
     @about = Photo.about
   end
 
@@ -63,6 +63,14 @@ class PhotosController < ApplicationController
     end
   end
 
+  def update_photos_order
+    @photo = Photo.find(photo_params[:photo_id])
+    @photo.photos_order_position = photo_params[:photos_order_position]
+    @photo.save
+
+    render nothing: true
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_photo
@@ -71,6 +79,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:image, :category)
+      params.require(:photo).permit(:image, :category, :photo_id, :photos_order_position)
     end
 end

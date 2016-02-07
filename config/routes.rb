@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     resources :videos do
       post :update_row_order, on: :collection
     end
-    resources :photos
+    resources :photos do
+      post :update_photos_order, on: :collection
+    end
   end
   
   devise_for :users, skip: [:registrations, :sessions]
