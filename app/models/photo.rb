@@ -1,12 +1,13 @@
 class Photo < ActiveRecord::Base
   include RankedModel
-  
+
   CATEGORIES = ["Photos", "About"]
 
   scope :photos, -> { where(category: "Photos") }
   scope :about, -> { where(category: "About") }
 
   ranks :photos_order, scope: :photos
+  ranks :about_order, scope: :about
 
   has_attached_file :image, styles: {
     thumb: '100x100>',
