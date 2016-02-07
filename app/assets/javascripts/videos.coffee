@@ -1,11 +1,11 @@
 $ ->
-  if $('#sortable').length > 0
-    table_width = $('#sortable').width()
-    cells = $('.table').find('tr')[0].cells.length
+  if $('#sortable_videos').length > 0
+    table_width = $('#sortable_videos').width()
+    cells = $('#sortable_videos').find('tr')[0].cells.length
     desired_width = table_width / cells + 'px'
-    $('.table td').css('width', desired_width)
+    $('#sortable_videos td').css('width', desired_width)
 
-    $('#sortable').sortable(
+    $('#sortable_videos').sortable(
       axis: 'y'
       items: '.item'
       cursor: 'move'
