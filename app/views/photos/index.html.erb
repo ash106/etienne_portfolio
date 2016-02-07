@@ -2,28 +2,69 @@
 
 <h1>Listing Photos</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Photos</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#photos" aria-controls="photos" role="tab" data-toggle="tab">Photos</a></li>
+    <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+  </ul>
 
-  <tbody>
-    <% @photos.each do |photo| %>
-      <tr>
-        <td><%= image_tag photo.image.url(:medium), class: "img-responsive" %></td>
-        <td><%= photo.category %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="photos">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Photos</th>
+            <th>Category</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<br>
+        <tbody>
+          <% @photos.each do |photo| %>
+            <tr>
+              <td><%= image_tag photo.image.url(:medium), class: "img-responsive" %></td>
+              <td><%= photo.category %></td>
+              <td><%= link_to 'Show', photo %></td>
+              <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+              <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-<%= link_to 'New Photo', new_photo_path %>
+      <br>
+
+      <%= link_to 'New Photo', new_photo_path %>
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade" id="about">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>About</th>
+            <th>Category</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @about.each do |photo| %>
+            <tr>
+              <td><%= image_tag photo.image.url(:medium), class: "img-responsive" %></td>
+              <td><%= photo.category %></td>
+              <td><%= link_to 'Show', photo %></td>
+              <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+              <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New Photo', new_photo_path %>
+    </div>
+  </div><!-- /.tab-content -->
+</div>
