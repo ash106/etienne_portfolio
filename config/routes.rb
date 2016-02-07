@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  resources :videos do
-    post :update_row_order, on: :collection
-  end
-  resources :photos
   root 'static_pages#home'
+  
+  scope '/admin' do
+    resources :videos do
+      post :update_row_order, on: :collection
+    end
+    resources :photos
+  end
+  
   devise_for :users, skip: [:registrations, :sessions]
   as :user do
     get 'login', to: 'devise/sessions#new', as: :new_user_session

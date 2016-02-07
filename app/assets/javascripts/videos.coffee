@@ -21,7 +21,7 @@ $ ->
         position = ui.item.index() # this will not work with paginated items, as the index is zero on every page
         $.ajax(
           type: 'POST'
-          url: '/videos/update_row_order'
+          url: '/admin/videos/update_row_order'
           dataType: 'json'
           data: { video: {video_id: video_id, row_order_position: position } }
         )
