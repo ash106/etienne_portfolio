@@ -10,7 +10,6 @@ class Photo < ActiveRecord::Base
   ranks :about_order, scope: :about
 
   has_attached_file :image, styles: {
-    thumb: '100x100>',
     medium: '300x300>',
     large: '800x800>'
   }
