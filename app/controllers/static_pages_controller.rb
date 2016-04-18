@@ -17,4 +17,9 @@ class StaticPagesController < ApplicationController
     @home = true
     @photos = Photo.photos.rank(:photos_order)
   end
+
+  def about
+    @home = true
+    @about = Photo.about.rank(:about_order)
+  end
 end

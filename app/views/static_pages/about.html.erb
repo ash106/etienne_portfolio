@@ -3,35 +3,13 @@
 </header>
 
 <div class="row text-center">
-  <div class="col-xs-4 heading">
-    <h3><%= link_to 'Videos', video_portfolio_path, class: 'header-link' %></h3>
-  </div>
-  <div class="col-xs-4 heading">
-    <h3><%= link_to 'Photos', photo_portfolio_path, class: 'header-link' %></h3>
-  </div>
-  <div class="col-xs-4 heading">
-    <h3><%= link_to 'About', about_portfolio_path, class: 'header-link' %></h3>
+  <div class="col-md-6 col-md-offset-3 heading">
+    <h3>About</h3>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-xs-4" id="left">
-    <% @videos.each do |video| %>
-      <%= link_to video["vimeo_url"], class: "fancybox-media" do %>
-        <span class="overlay center-block"></span>
-        <%= image_tag video["thumbnail_url"], class: "img-responsive" %>
-      <% end %>
-    <% end %>
-  </div>   
-  <div class="col-xs-4" id="middle">
-    <% @photos.each do |photo| %>
-      <%= link_to photo.image.url(:original), class: "fancybox", rel: "photos" do %>
-        <span class="overlay center-block"></span>
-        <%= image_tag photo.image.url(:large), class: 'img-responsive' %>
-      <% end %>
-    <% end %>
-  </div>
-  <div class="col-xs-4" id="right">
+  <div class="col-md-6 col-md-offset-3" id="middle">
     <% @about.each do |photo| %>
       <%= link_to photo.image.url(:original), class: "fancybox", rel: "photos" do %>
         <span class="overlay center-block"></span>
