@@ -7,4 +7,9 @@ class StaticPagesController < ApplicationController
     @about = Photo.about.rank(:about_order)
     @videos = Video.rank(:row_order).all
   end
+
+  def videos
+    @home = true
+    @videos = Video.rank(:row_order).all
+  end
 end

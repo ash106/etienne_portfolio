@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
+  get 'videos', to: 'static_pages#videos', as: :video_portfolio
   
   scope '/admin' do
     resources :videos do
