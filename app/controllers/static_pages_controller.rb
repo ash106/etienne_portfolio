@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   def home
     @home = true
     @photos = Photo.photos.rank(:photos_order)
-    @about = Photo.about.rank(:about_order)
+    @skiing = Photo.skiing.rank(:skiing_order)
     @videos = Video.rank(:row_order).all
   end
 
@@ -18,8 +18,8 @@ class StaticPagesController < ApplicationController
     @photos = Photo.photos.rank(:photos_order)
   end
 
-  def about
+  def skiing
     @home = true
-    @about = Photo.about.rank(:about_order)
+    @skiing = Photo.skiing.rank(:skiing_order)
   end
 end

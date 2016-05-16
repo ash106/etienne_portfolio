@@ -57,13 +57,13 @@ $ ->
     )
 
 $ ->
-  if $('#sortable_about').length > 0
-    table_width = $('#sortable_about').width()
-    cells = $('#sortable_about').find('tr')[0].cells.length
+  if $('#sortable_skiing').length > 0
+    table_width = $('#sortable_skiing').width()
+    cells = $('#sortable_skiing').find('tr')[0].cells.length
     desired_width = table_width / cells + 'px'
-    $('#sortable_about td').css('width', desired_width)
+    $('#sortable_skiing td').css('width', desired_width)
 
-    $('#sortable_about').sortable(
+    $('#sortable_skiing').sortable(
       axis: 'y'
       items: '.item'
       cursor: 'move'
@@ -79,8 +79,8 @@ $ ->
         position = ui.item.index() # this will not work with paginated items, as the index is zero on every page
         $.ajax(
           type: 'POST'
-          url: '/admin/photos/update_about_order'
+          url: '/admin/photos/update_skiing_order'
           dataType: 'json'
-          data: { photo: {photo_id: photo_id, about_order_position: position } }
+          data: { photo: {photo_id: photo_id, skiing_order_position: position } }
         )
     )

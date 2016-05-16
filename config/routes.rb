@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'videos', to: 'static_pages#videos', as: :video_portfolio
   get 'photos', to: 'static_pages#photos', as: :photo_portfolio
-  get 'about', to: 'static_pages#about', as: :about_portfolio
+  get 'skiing', to: 'static_pages#skiing', as: :skiing_portfolio
   
   scope '/admin' do
     resources :videos do
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
     resources :photos do
       post :update_photos_order, on: :collection
-      post :update_about_order, on: :collection
+      post :update_skiing_order, on: :collection
     end
   end
   

@@ -6,7 +6,7 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @photos = Photo.photos.rank(:photos_order)
-    @about = Photo.about.rank(:about_order)
+    @skiing = Photo.skiing.rank(:skiing_order)
   end
 
   # GET /photos/1
@@ -71,9 +71,9 @@ class PhotosController < ApplicationController
     render nothing: true
   end
 
-  def update_about_order
+  def update_skiing_order
     @photo = Photo.find(photo_params[:photo_id])
-    @photo.about_order_position = photo_params[:about_order_position]
+    @photo.skiing_order_position = photo_params[:skiing_order_position]
     @photo.save
 
     render nothing: true
@@ -87,6 +87,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:image, :category, :photo_id, :photos_order_position, :about_order_position)
+      params.require(:photo).permit(:image, :category, :photo_id, :photos_order_position, :skiing_order_position)
     end
 end
