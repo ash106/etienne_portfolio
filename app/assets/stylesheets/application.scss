@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Novecento Sans Wide Demibold';
+  src: font-url('Novecentosanswide-DemiBold-webfont.eot');
+  src: font-url('Novecentosanswide-DemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('Novecentosanswide-DemiBold-webfont.woff2') format('woff2'),
+       font-url('Novecentosanswide-DemiBold-webfont.woff') format('woff'),
+       font-url('Novecentosanswide-DemiBold-webfont.ttf') format('truetype'),
+       font-url('Novecentosanswide-DemiBold-webfont.svg#novecento_sans_widedemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $grid-gutter-width: 10px;
 
 @import "bootstrap-sprockets";
@@ -42,11 +54,6 @@ body.home {
 }
 
 header {
-  color: #fff;
-}
-
-h3 {
-  margin-top: 5px;
   color: #fff;
 }
 
@@ -178,13 +185,17 @@ span.overlay {
   margin-top: 50px;
 }
 
-#info-link {
-  color: white;
+#info-link, .header-link {
+  color: #aaa;
+  -webkit-transition: color 666ms ease-out;
+  transition: color 666ms ease-out;
   &:hover {
     text-decoration: none;
+    color: white;
   }
   &:focus {
     text-decoration: none;
+    color: white;
   }
 }
 
@@ -198,8 +209,16 @@ span.overlay {
   font-weight: 700;
 }
 
-.info-overlay-link, .header-link {
-  color: white;
+#home-header, .column-header-link, #info-link, .column-header {
+  font-family: "Novecento Sans Wide Demibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.info-overlay-link, .column-header-link {
+  color: black;
+  -webkit-transition: color 666ms ease-out;
+  transition: color 666ms ease-out;
   &:hover {
     text-decoration: none;
     color: white;
@@ -208,4 +227,25 @@ span.overlay {
     text-decoration: none;
     color: white;
   }
+}
+
+.column-header {
+  color: black;
+}
+
+#home-header {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 100px;
+}
+
+h3 {
+  margin-top: 0;
+  line-height: 50px;
+  background-color: #aaa;
+  font-size: 14px;
+}
+
+#info-link {
+  font-size: 12px;
 }
