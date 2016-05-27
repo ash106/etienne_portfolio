@@ -33,7 +33,7 @@
   </div>
   <div class="col-xs-4" id="right">
     <% @skiing.each do |photo| %>
-      <%= link_to photo.image.url(:original), class: "fancybox", rel: "photos" do %>
+      <%= link_to photo.image.url(:original), class: "fancybox", rel: "skiing" do %>
         <span class="overlay center-block"></span>
         <%= image_tag photo.image.url(:large), class: 'img-responsive' %>
       <% end %>
