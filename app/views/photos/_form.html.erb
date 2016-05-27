@@ -1,5 +1,5 @@
 <% if @photo.image.exists? %>
-  <%= image_tag @photo.image.url(:medium), id: 'image-preview', class: 'img-responsive' %>
+  <%= image_tag @photo.image.url(:small), id: 'image-preview', class: 'img-responsive' %>
 <% else %>
   <%= image_tag 'placeholder.png', id: 'image-preview', class: 'img-responsive' %>
 <% end %>

@@ -24,7 +24,7 @@
         <tbody>
           <% @photos.each do |photo| %>
             <tr data-photo-id="<%= photo.id %>" class="item">
-              <td><%= image_tag photo.image.url(:medium), class: "img-responsive" %></td>
+              <td><%= image_tag photo.image.url(:small), class: "img-responsive" %></td>
               <td><%= photo.category %></td>
               <td><%= link_to 'Show', photo %></td>
               <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
@@ -52,7 +52,7 @@
         <tbody>
           <% @skiing.each do |photo| %>
             <tr data-photo-id="<%= photo.id %>" class="item">
-              <td><%= image_tag photo.image.url(:medium), class: "img-responsive" %></td>
+              <td><%= image_tag photo.image.url(:small), class: "img-responsive" %></td>
               <td><%= photo.category %></td>
               <td><%= link_to 'Show', photo %></td>
               <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
