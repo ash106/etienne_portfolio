@@ -33,8 +33,8 @@ body.home {
 }
 
 .container-fluid {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 #left, #middle, #right {
@@ -58,12 +58,12 @@ header {
 }
 
 footer {
-  line-height: 50px;
+  line-height: 27px; // should be 30px but text is not vertically centered at 30px
   color: #fff;
 }
 
 .img-responsive, iframe {
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .heading {
@@ -212,7 +212,7 @@ span.overlay {
 #home-header, .column-header-link, #info-link, .column-header {
   font-family: "Novecento Sans Wide Demibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .info-overlay-link, .column-header-link {
@@ -236,16 +236,68 @@ span.overlay {
 #home-header {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 100px;
+  line-height: 50px;
 }
 
 h3 {
   margin-top: 0;
-  line-height: 50px;
+  margin-bottom: 4px;
+  line-height: 30px;
   background-color: #aaa;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 #info-link {
-  font-size: 12px;
+  font-size: 8px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.col-xs-4, .col-md-6 {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .container-fluid {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  footer {
+    line-height: 50px;
+  }
+
+  .img-responsive, iframe {
+    margin-bottom: 10px;
+  }
+
+  #home-header, .column-header-link, #info-link, .column-header {
+    letter-spacing: 4px;
+  }
+
+  #home-header {
+    line-height: 100px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    line-height: 50px;
+    font-size: 14px;
+  }
+
+  .col-xs-4, .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #info-link {
+    font-size: 12px;
+  }
 }
