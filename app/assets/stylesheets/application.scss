@@ -59,7 +59,7 @@ header {
 
 footer {
   line-height: 27px; // should be 30px but text is not vertically centered at 30px
-  color: #fff;
+  color: #aaa;
 }
 
 .img-responsive, iframe {
@@ -185,7 +185,7 @@ span.overlay {
   margin-top: 50px;
 }
 
-#info-link, .header-link {
+#info-link, .header-link, .about-link {
   color: #aaa;
   -webkit-transition: color 666ms ease-out;
   transition: color 666ms ease-out;
@@ -195,7 +195,7 @@ span.overlay {
   }
   &:focus {
     text-decoration: none;
-    color: white;
+    color: #aaa;
   }
 }
 
@@ -209,7 +209,7 @@ span.overlay {
   font-weight: 700;
 }
 
-#home-header, .column-header-link, #info-link, .column-header {
+#home-header, .column-header-link, #info-link, .column-header, .about-link, footer {
   font-family: "Novecento Sans Wide Demibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -247,7 +247,7 @@ h3 {
   font-size: 10px;
 }
 
-#info-link {
+#info-link, .about-link, footer {
   font-size: 8px;
 }
 
@@ -258,6 +258,17 @@ h1 {
 .col-xs-4, .col-md-6 {
   padding-left: 2px;
   padding-right: 2px;
+}
+
+.about-link {
+  padding: 0 5px;
+}
+
+.quote {
+  color: #aaa;
+  margin-bottom: 4px;
+  font-size: 10px;
+  line-height: 20px;
 }
 
 @media (min-width: $screen-sm-min) {
@@ -274,7 +285,7 @@ h1 {
     margin-bottom: 10px;
   }
 
-  #home-header, .column-header-link, #info-link, .column-header {
+  #home-header, .column-header-link, #info-link, .column-header, .about-link, footer {
     letter-spacing: 4px;
   }
 
@@ -297,7 +308,18 @@ h1 {
     padding-right: 5px;
   }
 
-  #info-link {
+  #info-link, .about-link, footer {
     font-size: 12px;
+  }
+
+  .about-link {
+    padding: 0 13px;
+  }
+
+  .quote {
+    margin: 0 0 10px;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 1px;
   }
 }

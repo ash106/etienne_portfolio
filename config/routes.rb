@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'videos', to: 'static_pages#videos', as: :video_portfolio
   get 'photos', to: 'static_pages#photos', as: :photo_portfolio
   get 'skiing', to: 'static_pages#skiing', as: :skiing_portfolio
+  get 'about', to: 'static_pages#about', as: :about
   
   scope '/admin' do
     resources :videos do

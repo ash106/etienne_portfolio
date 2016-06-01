@@ -1,0 +1,46 @@
+<header class="row">
+  <h1 id="home-header" class="text-center"><%= link_to 'Etienne Arent', root_path, class: 'header-link' %></h1>
+</header>
+
+<div class="row text-center">
+  <div class="col-md-6 col-md-offset-3 heading">
+    <h3 class="column-header">About</h3>
+  </div>
+</div>
+
+<div class="row">  
+  <div class="col-md-6 col-md-offset-3" id="middle">
+    <p class="quote">
+      “Yeah here I come just passing through, follow me beyond the mountain, 
+      howl at the ol' big moon. Yeah strip them clothes right off your body, 
+      dress your skin in sticks and stones. Doesn't matter where were headed 
+      cause some us were built to roam.”
+      <br>
+      —Alejandrio Rose-Garcia
+    </p>
+    <%= link_to asset_path("etienne_in_the_water_straightened.jpg"), class: "fancybox", rel: "photos" do %>
+      <span class="overlay center-block"></span>
+      <%= image_tag "etienne_in_the_water_straightened.jpg", class: 'img-responsive' %>
+    <% end %>
+    <%= link_to asset_path("etienne_thumbs_up_on_the_beach.jpg"), class: "fancybox", rel: "photos" do %>
+      <span class="overlay center-block"></span>
+      <%= image_tag "etienne_thumbs_up_on_the_beach.jpg", class: 'img-responsive' %>
+    <% end %>
+    <%= link_to asset_path("etienne_a_camera_a_tree.jpg"), class: "fancybox", rel: "photos" do %>
+      <span class="overlay center-block"></span>
+      <%= image_tag "etienne_a_camera_a_tree.jpg", class: 'img-responsive' %>
+    <% end %>
+    <%= link_to asset_path("etienne_hammock_lounging.jpg"), class: "fancybox", rel: "photos" do %>
+      <span class="overlay center-block"></span>
+      <%= image_tag "etienne_hammock_lounging.jpg", class: 'img-responsive' %>
+    <% end %>
+  </div>
+</div>
+
+<footer class="row text-center">
+  <%= link_to "Email", "mailto:etjarent@gmail.com", target: "_blank", class: 'about-link' %>
+  /
+  <%= link_to "Vimeo", "https://vimeo.com/user966917", target: "_blank", class: 'about-link' %>
+  /
+  <%= link_to "Instagram", "https://www.instagram.com/etiennearent/", target: "_blank", class: 'about-link' %>
+</footer>
