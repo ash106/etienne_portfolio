@@ -10,13 +10,3 @@ $ ->
 
   $(window).resize ->
     resizeColumns()
-
-  $('#info-link').click (e) ->
-    $('.please-wait').toggle()
-    e.preventDefault()
-
-  $('#close-link').click (e) ->
-    $('.please-wait').hide()
-
-  # $('.please-wait').click (e) ->
-  #   $('.please-wait').toggle()

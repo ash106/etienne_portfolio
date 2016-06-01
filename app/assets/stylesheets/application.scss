@@ -151,40 +151,6 @@ span.overlay {
   box-shadow: 0px 0px 4px  #000; 
 }
 
-
-.please-wait{
-  background-color: rgba(0, 0, 0, 0.9);
-  top: 69px;
-  left: 0;
-  bottom: 50px;
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-  display:none;
-}
-
-.please-wait-text{
-  // border: 1px solid #ffffff;
-  // border-radius: 4px;
-  color: #fff;
-  // float: left;
-  // font-size: 22px;
-  // left: 50%;
-  padding: 20px;
-  // position: absolute;
-  // top: 40%;
-  // width: auto;
-}
-
-.please-wait-text a {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.please-wait-text p {
-  margin-top: 50px;
-}
-
 #info-link, .header-link, .about-link {
   color: #aaa;
   -webkit-transition: color 666ms ease-out;
@@ -195,18 +161,12 @@ span.overlay {
   }
   &:focus {
     text-decoration: none;
-    color: #aaa;
+    color: white;
   }
 }
 
-#close-link {
-  margin-top: 145px;
-}
-
-#close-link span {
-  cursor: pointer;
-  font-size: 40px;
-  font-weight: 700;
+.about-link:focus {
+  color: #aaa;
 }
 
 #home-header, .column-header-link, #info-link, .column-header, .about-link, footer {
