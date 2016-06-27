@@ -59,7 +59,7 @@ header {
 
 footer {
   line-height: 27px; // should be 30px but text is not vertically centered at 30px
-  color: #aaa;
+  color: #f8f8ff;
 }
 
 .img-responsive, iframe {
@@ -152,7 +152,7 @@ span.overlay {
 }
 
 #info-link, .header-link, .about-link {
-  color: #aaa;
+  color: #f8f8ff;
   -webkit-transition: color 666ms ease-out;
   transition: color 666ms ease-out;
   &:hover {
@@ -166,7 +166,7 @@ span.overlay {
 }
 
 .about-link:focus {
-  color: #aaa;
+  color: #f8f8ff;
 }
 
 #home-header, .column-header-link, #info-link, .column-header, .about-link, footer {
@@ -203,7 +203,7 @@ h3 {
   margin-top: 0;
   margin-bottom: 4px;
   line-height: 30px;
-  background-color: #aaa;
+  background-color: #f8f8ff;
   font-size: 10px;
 }
 
@@ -225,7 +225,7 @@ h1 {
 }
 
 .quote {
-  color: #aaa;
+  color: #f8f8ff;
   margin-bottom: 4px;
   font-size: 10px;
   line-height: 20px;
