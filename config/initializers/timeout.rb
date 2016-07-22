@@ -1,3 +1,3 @@
-Rack::Timeout.timeout = 1200  # seconds
+# Rack::Timeout.timeout = 1200  # seconds
 
-Rack::Timeout.unregister_state_change_observer(:logger) if Rails.env.development?
+# Rack::Timeout.unregister_state_change_observer(:logger) if Rails.env.development?
