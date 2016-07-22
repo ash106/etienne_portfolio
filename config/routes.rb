@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :photos do
       post :update_photos_order, on: :collection
       post :update_skiing_order, on: :collection
+      post :update_about_order, on: :collection
     end
   end
   

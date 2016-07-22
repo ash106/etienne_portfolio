@@ -25,5 +25,6 @@ class StaticPagesController < ApplicationController
 
   def about
     @home = true
+    @about = Photo.about.rank(:about_order)
   end
 end
