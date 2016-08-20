@@ -222,6 +222,10 @@ h1 {
   line-height: 20px;
 }
 
+#header-logo {
+  height: 40px;
+}
+
 @media (min-width: $screen-sm-min) {
   .container-fluid {
     margin-left: 5px;
@@ -272,5 +276,9 @@ h1 {
     font-size: 12px;
     line-height: 24px;
     letter-spacing: 1px;
+  }
+
+  #header-logo {
+    height: 80px;
   }
 }

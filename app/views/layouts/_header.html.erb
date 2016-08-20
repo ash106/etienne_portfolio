@@ -1,3 +1,7 @@
 <header class="row">
-  <h1 id="home-header" class="text-center"><%= link_to 'Etienne Arent', root_path, class: 'header-link' %></h1>
+  <h1 id="home-header" class="text-center">
+    <%= link_to root_path, class: 'header-link' do %>
+      Etienne<%= image_tag "etienne_logo_black.jpg", id: "header-logo" %>Arent
+    <% end %>
+  </h1>
 </header>
