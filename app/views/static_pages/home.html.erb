@@ -23,7 +23,7 @@
   </div>   
   <div class="col-xs-4" id="middle">
     <% @photos.each do |photo| %>
-      <%= link_to photo.image.url(:original), class: "fancybox", rel: "photos" do %>
+      <%= link_to photo.image.url(:original), title: photo.caption, class: "fancybox", rel: "photos" do %>
         <span class="overlay center-block"></span>
         <%= image_tag photo.image.url(:medium), class: 'img-responsive' %>
       <% end %>
@@ -31,7 +31,7 @@
   </div>
   <div class="col-xs-4" id="right">
     <% @skiing.each do |photo| %>
-      <%= link_to photo.image.url(:original), class: "fancybox", rel: "skiing" do %>
+      <%= link_to photo.image.url(:original), title: photo.caption, class: "fancybox", rel: "skiing" do %>
         <span class="overlay center-block"></span>
         <%= image_tag photo.image.url(:medium), class: 'img-responsive' %>
       <% end %>

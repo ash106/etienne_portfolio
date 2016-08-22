@@ -9,6 +9,7 @@
 
   <div class="form-inputs">
     <%= f.input :image, as: :file, input_html: { onChange: 'loadFile(event)' } %>
+    <%= f.input :caption %>
     <%= f.input :category, collection: Photo::CATEGORIES, include_blank: false %>
   </div>
 

@@ -9,7 +9,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3" id="middle">
     <% @skiing.each do |photo| %>
-      <%= link_to photo.image.url(:original), class: "fancybox", rel: "photos" do %>
+      <%= link_to photo.image.url(:original), title: photo.caption, class: "fancybox", rel: "photos" do %>
         <span class="overlay center-block"></span>
         <%= image_tag photo.image.url(:large), class: 'img-responsive' %>
       <% end %>

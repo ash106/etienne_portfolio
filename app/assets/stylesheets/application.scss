@@ -226,6 +226,15 @@ h1 {
   height: 40px;
 }
 
+.fancybox-title {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #f8f8ff;
+  font-size: 10px;
+  text-align: center;
+}
+
+
 @media (min-width: $screen-sm-min) {
   .container-fluid {
     margin-left: 5px;
@@ -280,5 +289,10 @@ h1 {
 
   #header-logo {
     height: 80px;
+  }
+
+  .fancybox-title {
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 }

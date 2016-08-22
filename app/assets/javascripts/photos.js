@@ -5,7 +5,12 @@ var loadFile = function(event) {
 
 $(document).ready(function() {
   $(".fancybox").fancybox({
-    padding: 0
+    padding: 0,
+    helpers: {
+      title: {
+        type: 'outside'
+      }
+    }
   });
 
   $('.fancybox-media').fancybox({
