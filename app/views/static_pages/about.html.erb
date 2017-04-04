@@ -1,14 +1,32 @@
 <%= render "layouts/header" %>
 
-<div class="row text-center">
-  <div class="col-md-6 col-md-offset-3 heading">
-    <h3 class="column-header">About</h3>
-  </div>
-</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3" id="about">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag @about.first.image.url(:large), class: 'img-responsive' %>
+        </div>
+        <% @about.drop(1).each do |photo| %>
+          <div class="item">
+            <%= image_tag photo.image.url(:large), class: 'img-responsive' %>
+          </div>
+        <% end %>
+      </div>
 
-<div class="row">  
-  <div class="col-md-6 col-md-offset-3" id="middle">
-    <p class="quote">
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <p class="quote text-center">
       “Yeah here I come just passing through, follow me beyond the mountain, 
       howl at the ol' big moon. Yeah strip them clothes right off your body, 
       dress your skin in sticks and stones. Doesn't matter where were headed 
@@ -16,12 +34,6 @@
       <br>
       —Alejandrio Rose-Garcia
     </p>
-    <% @about.each do |photo| %>
-      <%= link_to photo.image.url(:original), title: photo.caption, class: "fancybox", rel: "photos" do %>
-        <span class="overlay center-block"></span>
-        <%= image_tag photo.image.url(:large), class: 'img-responsive' %>
-      <% end %>
-    <% end %>
   </div>
 </div>
 
